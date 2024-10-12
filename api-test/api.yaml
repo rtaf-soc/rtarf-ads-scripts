@@ -1,0 +1,55 @@
+endpoint:
+  dev:
+    uri: https://api-dev.please-scan.com
+    basicAuthenUserEnvVar: DEV_BASIC_AUTHEN_USER
+    basicAuthenPasswordEnvVar: DEV_BASIC_AUTHEN_PASSWORD
+  local:
+    uri: http://localhost:5102
+    basicAuthenUserEnvVar: LOCAL_BASIC_AUTHEN_USER
+    basicAuthenPasswordEnvVar: LOCAL_BASIC_AUTHEN_PASSWORD
+
+api:
+  GetBlacklists:
+    method: POST
+    controller: Blacklist
+    body: BlacklistQuery1
+    path: /
+  
+  GetBlacklistCount:
+    method: POST
+    controller: Blacklist
+    body: BlacklistQuery1
+    path: /
+
+  AddBlacklist:
+    method: POST
+    controller: Blacklist
+    body: BlacklistSrcIP1
+    path: /
+
+  DeleteBlacklistById:
+    method: DELETE
+    controller: Blacklist
+    path: /85b7d516-c0b3-4b81-a6f7-cace32957aed
+  
+  GetBlacklistById:
+    method: GET
+    controller: Blacklist
+    path: /85b7d516-c0b3-4b81-a6f7-cace32957aed
+
+  GetBlacklistByCode:
+    method: GET
+    controller: Blacklist
+    path: /89.248.165.124
+
+
+data:
+  BlacklistQuery1:
+    BlacklistType: null
+    BlacklistCode: ""
+    FullTextSearch: ""
+
+  BlacklistSrcIP1:
+    BlacklistCode: "89.248.165.67"
+    Tags: "Custom"
+    BlacklistType: 1
