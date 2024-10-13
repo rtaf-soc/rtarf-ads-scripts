@@ -3,6 +3,10 @@ endpoint:
     uri: https://api-dev.please-scan.com
     basicAuthenUserEnvVar: DEV_BASIC_AUTHEN_USER
     basicAuthenPasswordEnvVar: DEV_BASIC_AUTHEN_PASSWORD
+  prod:
+    uri: https://ads-api.rtarf-prod.its-software-services.com
+    basicAuthenUserEnvVar: PROD_BASIC_AUTHEN_USER
+    basicAuthenPasswordEnvVar: PROD_BASIC_AUTHEN_PASSWORD
   local:
     uri: http://localhost:5102
     basicAuthenUserEnvVar: LOCAL_BASIC_AUTHEN_USER
