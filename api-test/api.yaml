@@ -13,6 +13,25 @@ endpoint:
     basicAuthenPasswordEnvVar: LOCAL_BASIC_AUTHEN_PASSWORD
 
 api:
+  GetIpMaps:
+    method: POST
+    controller: IpMap
+    body: IpMapQuery1
+    path: /
+
+  AddIpMap:
+    method: POST
+    controller: IpMap
+    body: IpMapCreate1
+    path: /
+
+  GetIpMapCount:
+    method: POST
+    controller: IpMap
+    body: IpMapQuery1
+    path: /
+
+
   GetBlacklists:
     method: POST
     controller: Blacklist
@@ -57,3 +76,13 @@ data:
     BlacklistCode: "89.248.165.67"
     Tags: "Custom"
     BlacklistType: 1
+
+  IpMapQuery1:
+    Cidr: ""
+    Zone: ""
+    FullTextSearch: ""
+
+  IpMapCreate1:
+    Cidr: "89.248.165.68/32"
+    Zone: "ทดสอบ"
+    Description: "Test from script"

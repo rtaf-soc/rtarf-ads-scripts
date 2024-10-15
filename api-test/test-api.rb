@@ -44,8 +44,8 @@ dataObj = cfg['data']
 status, responseStr = invoke_api(orgId, apiName, apiObj, endpointObj, dataObj)
 
 puts("INFO : Returned with status code [#{status}]\n")
-if (status == "200")
+#if (status == "200")
   puts("INFO : ===== Begin response data =====\n")
   puts("#{responseStr}\n")
   puts("INFO : ===== End response data =====\n")
-end
+#end
