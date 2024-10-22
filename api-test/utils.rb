@@ -46,7 +46,7 @@ def invoke_api(orgId, apiName, apiObj, endpointObj, dataObj)
   https.use_ssl = useSSL
   https.verify_mode = OpenSSL::SSL::VERIFY_NONE
   https.read_timeout = 10
-  https.open_timeout = 1
+  https.open_timeout = 10
   https.max_retries = 0
 
   jsonStr = ''
@@ -73,9 +73,9 @@ def invoke_api(orgId, apiName, apiObj, endpointObj, dataObj)
   status = ""
   begin
     response = https.request(request)
-  #rescue
-  #    status = 'ERROR'
-  #else
+  rescue
+      status = 'ERROR'
+  else
       #No error
       status = response.code
       responseStr = response.body
