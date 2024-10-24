@@ -66,6 +66,23 @@ api:
     path: /89.248.165.124
 
 
+  GetIocHosts:
+    method: POST
+    controller: IocHost
+    body: IocHostQuery1
+    path: /
+
+  AddIocHost:
+    method: POST
+    controller: IocHost
+    body: IocHostData1
+    path: /
+
+  DeleteIocHostById:
+    method: DELETE
+    controller: IocHost
+    path: /72d4a1b6-08cd-4d83-968e-ba703ae2cbbe
+
 data:
   BlacklistQuery1:
     BlacklistType: null
@@ -86,3 +103,16 @@ data:
     Cidr: "89.248.165.68/32"
     Zone: "ทดสอบ"
     Description: "Test from script"
+
+  IocHostData1:
+    IocHostCode: "MISP-002"
+    IocType: "MISP"
+    IocEndpoint: "https://192.168.1.90"
+    AuthenticationKey: "change-here"
+    IsTlsRequired: true
+    Description: "MISP test environment"
+
+  IocHostQuery1:
+    IocType: ""
+    IocEndpoint: ""
+    FullTextSearch: "MISP"
