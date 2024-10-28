@@ -13,6 +13,17 @@ endpoint:
     basicAuthenPasswordEnvVar: LOCAL_BASIC_AUTHEN_PASSWORD
 
 api:
+  GetSystemVariables:
+    method: POST
+    controller: SystemVariable
+    body: SystemVariableQuery1
+    path: /
+  AddSystemVariable:
+    method: POST
+    controller: SystemVariable
+    body: SystemVariableCreate1
+    path: /
+
   GetIpMaps:
     method: POST
     controller: IpMap
@@ -83,7 +94,19 @@ api:
     controller: IocHost
     path: /72d4a1b6-08cd-4d83-968e-ba703ae2cbbe
 
+  GetIocHostCount:
+    method: POST
+    controller: IocHost
+    body: IocHostQuery1
+    path: /
 data:
+  SystemVariableQuery1:
+    FullTextSearch: ""
+  SystemVariableCreate1:
+    VariableName: "MISP_SELECTED_CODE"
+    VariableValue: "MISP-001"
+    Description: "Test from script"
+
   BlacklistQuery1:
     BlacklistType: null
     BlacklistCode: ""
