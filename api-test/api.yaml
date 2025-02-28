@@ -21,7 +21,7 @@ api:
   AddSystemVariable:
     method: POST
     controller: SystemVariable
-    body: SystemVariableCreate1
+    body: SystemVariableUrl4Dev
     path: /
 
   GetIpMaps:
@@ -102,10 +102,45 @@ api:
 data:
   SystemVariableQuery1:
     FullTextSearch: ""
+
   SystemVariableCreate1:
     VariableName: "MISP_SELECTED_CODE"
     VariableValue: "MISP-001"
     Description: "Test from script"
+
+  SystemVariableUrl1Dev:
+    VariableName: "OVERVIEW_SECTION_URL1"
+    VariableValue: "https://www.google.com/"
+    Description: "Section 1 webview URL"
+  SystemVariableUrl2Dev:
+    VariableName: "OVERVIEW_SECTION_URL2"
+    VariableValue: "https://napbiotec.io/"
+    Description: "Section 2 webview URL"
+  SystemVariableUrl3Dev:
+    VariableName: "OVERVIEW_SECTION_URL3"
+    VariableValue: "https://github.com/"
+    Description: "Section 3 webview URL"
+  SystemVariableUrl4Dev:
+    VariableName: "OVERVIEW_SECTION_URL4"
+    VariableValue: "https://aldamex.com/"
+    Description: "Section 4 webview URL"
+
+  SystemVariableUrl1Prod:
+    VariableName: "OVERVIEW_SECTION_URL1"
+    VariableValue: "https://geoip-map.rtarf-prod.its-software-services.com/"
+    Description: "Section 1 webview URL"
+  SystemVariableUrl2Prod:
+    VariableName: "OVERVIEW_SECTION_URL2"
+    VariableValue: "https://uptime-kuma.rtarf-prod.its-software-services.com/dashboard"
+    Description: "Section 2 webview URL"
+  SystemVariableUrl3Prod:
+    VariableName: "OVERVIEW_SECTION_URL3"
+    VariableValue: "https://superset.rtarf-prod.its-software-services.com/"
+    Description: "Section 3 webview URL"
+  SystemVariableUrl4Prod:
+    VariableName: "OVERVIEW_SECTION_URL4"
+    VariableValue: "https://superset.rtarf-prod.its-software-services.com/"
+    Description: "Section 4 webview URL"
 
   BlacklistQuery1:
     BlacklistType: null
