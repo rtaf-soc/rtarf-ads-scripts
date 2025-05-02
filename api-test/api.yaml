@@ -13,6 +13,35 @@ endpoint:
     basicAuthenPasswordEnvVar: LOCAL_BASIC_AUTHEN_PASSWORD
 
 api:
+  UpdateHuntingRuleById:
+    method: POST
+    controller: HuntingRule
+    path: /ca853c09-7e00-47b2-b39e-f9f354dda8fe
+    body: HuntingRuleSigma2
+  GetHuntingRuleById:
+    method: GET
+    controller: HuntingRule
+    path: /ca853c09-7e00-47b2-b39e-f9f354dda8fe
+  GetHuntingRuleCount:
+    method: POST
+    controller: HuntingRule
+    body: HuntingRuleQuery1
+    path: /
+  GetHuntingRules:
+    method: POST
+    controller: HuntingRule
+    body: HuntingRuleQuery1
+    path: /
+  AddHuntingRule:
+    method: POST
+    controller: HuntingRule
+    body: HuntingRuleSigma2
+    path: /
+  DeleteHuntingRuleById:
+    method: DELETE
+    controller: HuntingRule
+    path: /3ff83c18-21cb-438d-a196-5c3e51776653
+
   GetSystemVariables:
     method: POST
     controller: SystemVariable
@@ -100,6 +129,9 @@ api:
     body: IocHostQuery1
     path: /
 data:
+  HuntingRuleQuery1:
+    FullTextSearch: ""
+
   SystemVariableQuery1:
     FullTextSearch: ""
 
@@ -124,6 +156,18 @@ data:
     VariableName: "OVERVIEW_SECTION_URL4"
     VariableValue: "https://aldamex.com/"
     Description: "Section 4 webview URL"
+  HuntingRuleSigma1:
+    RuleName: "Test-Sigma-Rule1"
+    RuleDescription: "Mocked sigma rule"
+    RuleDefinition: "YAML content here"
+    RefType: "Sigma"
+    RefUrl: "https://github.org/sigma/abcxxx"
+  HuntingRuleSigma2:
+    RuleName: "Test-Sigma-Rule2"
+    RuleDescription: "Mocked sigma rule #2"
+    RuleDefinition: "YAML content here #2"
+    RefType: "Sigma"
+    RefUrl: "https://github.org/sigma/abcxxx"
 
   SystemVariableUrl1Prod:
     VariableName: "OVERVIEW_SECTION_URL1"
