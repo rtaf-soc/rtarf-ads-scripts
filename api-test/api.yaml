@@ -12,6 +12,7 @@ endpoint:
     basicAuthenUserEnvVar: LOCAL_BASIC_AUTHEN_USER
     basicAuthenPasswordEnvVar: LOCAL_BASIC_AUTHEN_PASSWORD
 
+
 api:
   UpdateHuntingRuleById:
     method: POST
