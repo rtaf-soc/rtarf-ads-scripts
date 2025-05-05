@@ -62,7 +62,7 @@ def invoke_api(orgId, apiName, apiObj, endpointObj, dataObj)
   if (!bodyObj.nil?)
     # Convert to JSON
     jsonStr = bodyObj.to_json
-  puts(jsonStr)
+  #puts(jsonStr)
   end
 
   request['Accept'] = 'application/json'
