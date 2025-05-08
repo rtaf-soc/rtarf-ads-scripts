@@ -1,2 +1,5 @@
 env.rb
 members.txt
+temp
+*.py
+chromedriver.exe
