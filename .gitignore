@@ -3,3 +3,4 @@ members.txt
 temp
 *.py
 chromedriver.exe
+*.csv
