@@ -151,7 +151,10 @@ File.foreach('machine.csv') do |line|
   }
 
   puts("INFO : ### Updating data for machine [#{machineName}], IP=[#{ipAddress}], Zone=[#{zone}]")
-  upsertData(conn, obj, cnt)
+
+  tableName = "\"CsMachineStat\""
+  puts("INSERT INTO #{tableName} (machine_stat_id, machine_name, last_cs_event_date, department_name) VALUES (gen_random_uuid(), '#{machineName}', CURRENT_TIMESTAMP, '#{zone}');")
+  #upsertData(conn, obj, cnt)
 end
 
 puts("INFO : ### Done updating [#{cnt}] records.")

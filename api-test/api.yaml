@@ -14,6 +14,37 @@ endpoint:
 
 
 api:
+  GetUsers:
+    method: POST
+    controller: OrganizationUser
+    body: OrganizationUserQuery1
+    path: /
+  GetUserCount:
+    method: POST
+    controller: OrganizationUser
+    body: OrganizationUserQuery1
+    path: /
+  GetUserById:
+    method: GET
+    controller: OrganizationUser
+    path: /1a08399a-1c09-4663-b8fd-bd05cf4fbec0
+  AddUser:
+    method: POST
+    controller: OrganizationUser
+    body: OrganizationUser1
+    path: /
+  UpdateUserById:
+    method: POST
+    controller: OrganizationUser
+    path: /1a08399a-1c09-4663-b8fd-bd05cf4fbec0
+    body: OrganizationUser1
+
+  AddNote:
+    method: POST
+    controller: Note
+    body: NoteData1
+    path: /
+
   UpdateHuntingRuleById:
     method: POST
     controller: HuntingRule
@@ -130,6 +161,9 @@ api:
     body: IocHostQuery1
     path: /
 data:
+  OrganizationUserQuery1:
+    FullTextSearch: ""
+
   HuntingRuleQuery1:
     FullTextSearch: ""
 
@@ -141,6 +175,17 @@ data:
     VariableValue: "MISP-001"
     Description: "Test from script"
 
+  NoteData1:
+    Header: "Test note header"
+    Description: "This is description"
+    owner: "This is owner"
+    tags: "xxx,yyy"
+
+  OrganizationUser1:
+    UserName: "user2.test"
+    RolesList: "OWNER"
+    UserEmail: "user2.test@gmail.com"
+  
   SystemVariableUrl1Dev:
     VariableName: "OVERVIEW_SECTION_URL1"
     VariableValue: "https://www.google.com/"
